@@ -524,7 +524,7 @@ function agendarVisita(){
     </div>
 
     <div style="border-top:1px solid #2a2a2a;padding-top:20px;">
-      <p style="color:#ffffff;font-size:13px;margin:0 0 6px 0;font-weight:600;">© 2026 Pedreiro Azulejista e Reformas · Todos os direitos reservados.</p>
+      <p style="color:#d4af37;font-size:13px;margin:0 0 6px 0;font-weight:700;">© 2026 Pedreiro Azulejista e Reformas · Todos os direitos reservados.</p>
       <p style="color:#ffffff;font-size:12px;margin:0 0 8px 0;opacity:0.75;">CNPJ: 62.602.238/0001-44 · LGPD · Lei 13.709/2018</p>
       <p style="font-size:11px;margin:0;">
         <a href="#privacidade" style="color:#ffffff;opacity:0.6;text-decoration:none;">Política de Privacidade</a>
@@ -541,102 +541,7 @@ function agendarVisita(){
 <a href="https://wa.me/5581989807935?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." class="float-wa"><i class="fab fa-whatsapp"></i></a>
 
 
-<!-- ASSISTENTE IA FLUTUANTE -->
-<div id="chat-bubble" onclick="toggleChat()" style="position:fixed;bottom:88px;right:20px;width:56px;height:56px;background:linear-gradient(135deg,#d4af37,#b8860b);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:9998;box-shadow:0 4px 20px rgba(212,175,55,0.4);font-size:24px;">
-  🤖
-</div>
 
-<div id="chat-box" style="display:none;position:fixed;bottom:160px;right:16px;width:min(340px,calc(100vw - 32px));background:#1a1a1a;border:1px solid #d4af37;border-radius:20px;z-index:9997;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5);font-family:'Segoe UI',sans-serif;">
-
-  <div style="background:linear-gradient(135deg,#d4af37,#b8860b);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;">
-    <div style="display:flex;align-items:center;gap:10px;">
-      <div style="font-size:22px;">🤖</div>
-      <div>
-        <div style="color:#000;font-weight:bold;font-size:14px;">Assistente PA</div>
-        <div style="color:#333;font-size:11px;">● Online agora</div>
-      </div>
-    </div>
-    <span onclick="toggleChat()" style="color:#000;font-size:20px;cursor:pointer;font-weight:bold;">✕</span>
-  </div>
-
-  <div id="chat-msgs" style="padding:16px;height:260px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;">
-    <div style="background:#2a2a2a;color:#fff;padding:12px 14px;border-radius:12px 12px 12px 4px;font-size:14px;line-height:1.5;max-width:90%;">
-      👋 Olá! Sou o assistente da <strong>Pedreiro Azulejista e Reformas</strong>.<br><br>
-      Posso te ajudar com informações sobre serviços, orçamentos e agendamentos. Como posso ajudar?
-    </div>
-  </div>
-
-  <div style="display:flex;gap:8px;flex-wrap:wrap;padding:0 12px 10px;">
-    <button onclick="enviarResposta('Quero um orçamento')" style="background:#2a2a2a;color:#d4af37;border:1px solid #333;padding:7px 12px;border-radius:20px;font-size:12px;cursor:pointer;">💰 Orçamento</button>
-    <button onclick="enviarResposta('Quais serviços vocês fazem?')" style="background:#2a2a2a;color:#d4af37;border:1px solid #333;padding:7px 12px;border-radius:20px;font-size:12px;cursor:pointer;">🔨 Serviços</button>
-    <button onclick="enviarResposta('Onde vocês atendem?')" style="background:#2a2a2a;color:#d4af37;border:1px solid #333;padding:7px 12px;border-radius:20px;font-size:12px;cursor:pointer;">📍 Atendimento</button>
-    <button onclick="enviarResposta('Quero agendar uma visita')" style="background:#2a2a2a;color:#d4af37;border:1px solid #333;padding:7px 12px;border-radius:20px;font-size:12px;cursor:pointer;">📅 Agendar</button>
-  </div>
-
-  <div style="display:flex;gap:8px;padding:0 12px 16px;">
-    <input id="chat-input" type="text" placeholder="Digite sua dúvida..." onkeydown="if(event.key==='Enter')enviarMsg()"
-      style="flex:1;padding:12px 14px;border-radius:10px;border:1px solid #333;background:#222;color:#fff;font-size:14px;"/>
-    <button onclick="enviarMsg()" style="background:#d4af37;color:#000;border:none;padding:12px 16px;border-radius:10px;font-weight:bold;cursor:pointer;font-size:16px;">➤</button>
-  </div>
-</div>
-
-<script>
-function toggleChat(){
-  var box=document.getElementById('chat-box');
-  box.style.display=box.style.display==='none'?'block':'none';
-}
-var respostas = {
-  'orcamento': 'Para orçamentos, acesse a seção acima ou clique aqui 👉 https://wa.me/5581989807935?text=Quero+um+orçamento. Respondemos em até 1 hora! 😊',
-  'servicos': '🔨 Nossos serviços:
-• Assentamento de porcelanato e azulejo
-• Reforma de banheiro completa
-• Revestimento de fachadas
-• Construção e alvenaria
-• Reforma geral
-
-Qual te interessa?',
-  'atendimento': '📍 Atendemos Recife e toda a Região Metropolitana de PE. Faça seu agendamento e combinamos o horário da visita técnica!',
-  'agendar': '📅 Para agendar sua visita técnica gratuita, use o formulário acima ou fale diretamente: https://wa.me/5581989807935?text=Quero+agendar+uma+visita',
-  'preco': '💰 Os valores variam conforme o serviço e metragem. Solicite seu orçamento gratuito! Fazemos a visita técnica sem compromisso.',
-  'prazo': '⏱️ O prazo depende do serviço. Em média: banheiro 5-10 dias, porcelanato por cômodo 2-4 dias. Confirmamos na visita técnica.',
-  'default': '😊 Entendi! Para te ajudar melhor, fale diretamente com a gente pelo WhatsApp: https://wa.me/5581989807935'
-};
-function detectarIntencao(msg){
-  msg = msg.toLowerCase();
-  if(msg.includes('orçamento')||msg.includes('orcamento')||msg.includes('preço')||msg.includes('preco')||msg.includes('valor')||msg.includes('quanto')) return 'preco';
-  if(msg.includes('serviço')||msg.includes('servico')||msg.includes('faz')||msg.includes('trabalho')) return 'servicos';
-  if(msg.includes('onde')||msg.includes('atende')||msg.includes('região')||msg.includes('cidade')) return 'atendimento';
-  if(msg.includes('agendar')||msg.includes('visita')||msg.includes('marcar')) return 'agendar';
-  if(msg.includes('prazo')||msg.includes('tempo')||msg.includes('dias')) return 'prazo';
-  return 'default';
-}
-function adicionarMsg(texto, lado){
-  var msgs=document.getElementById('chat-msgs');
-  var div=document.createElement('div');
-  div.style.cssText=lado==='user'
-    ?'background:#d4af37;color:#000;padding:10px 14px;border-radius:12px 12px 4px 12px;font-size:14px;max-width:85%;align-self:flex-end;font-weight:500;'
-    :'background:#2a2a2a;color:#fff;padding:10px 14px;border-radius:12px 12px 12px 4px;font-size:14px;max-width:90%;line-height:1.5;white-space:pre-line;';
-  div.textContent=texto;
-  msgs.appendChild(div);
-  msgs.scrollTop=msgs.scrollHeight;
-}
-function enviarResposta(texto){
-  adicionarMsg(texto,'user');
-  setTimeout(function(){
-    adicionarMsg(respostas[detectarIntencao(texto)]||respostas.default,'bot');
-  },600);
-}
-function enviarMsg(){
-  var input=document.getElementById('chat-input');
-  var texto=input.value.trim();
-  if(!texto)return;
-  adicionarMsg(texto,'user');
-  input.value='';
-  setTimeout(function(){
-    adicionarMsg(respostas[detectarIntencao(texto)]||respostas.default,'bot');
-  },700);
-}
-</script>
 
 </body>
 </html>
