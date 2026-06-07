@@ -307,7 +307,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
     <div class="rev-card">
       <div class="rev-top">
-        <div class="rev-av">W</div>
+        <div class="rev-av" style="background:linear-gradient(135deg,#d4af37,#b8860b);">W</div>
         <div>
           <div class="rev-name">Wlisses Francisco</div>
           <div class="rev-stars">★★★★★</div>
@@ -320,7 +320,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
     <div class="rev-card">
       <div class="rev-top">
-        <div class="rev-av">T</div>
+        <div class="rev-av" style="background:linear-gradient(135deg,#1a73e8,#0d47a1);">T</div>
         <div>
           <div class="rev-name">Tobias Ricelli de Oliveira</div>
           <div class="rev-stars">★★★★★</div>
@@ -333,7 +333,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
     <div class="rev-card">
       <div class="rev-top">
-        <div class="rev-av">A</div>
+        <div class="rev-av" style="background:linear-gradient(135deg,#34a853,#1e7e34);">A</div>
         <div>
           <div class="rev-name">Alberes Barbosa</div>
           <div class="rev-stars">★★★★★</div>
@@ -346,7 +346,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
     <div class="rev-card">
       <div class="rev-top">
-        <div class="rev-av">A</div>
+        <div class="rev-av" style="background:linear-gradient(135deg,#e91e63,#880e4f);">A</div>
         <div>
           <div class="rev-name">Adryelly Vitoria</div>
           <div class="rev-stars">★★★★★</div>
@@ -359,7 +359,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
     <div class="rev-card">
       <div class="rev-top">
-        <div class="rev-av">A</div>
+        <div class="rev-av" style="background:linear-gradient(135deg,#ff6f00,#e65100);">A</div>
         <div>
           <div class="rev-name">Anita Gomes de Freitas</div>
           <div class="rev-stars">★★★★★</div>
@@ -383,6 +383,73 @@ window.addEventListener('DOMContentLoaded',function(){
 </div>
 
 <!-- FOOTER -->
+
+
+<!-- AGENDAMENTO -->
+<section id="agendamento" style="background:#111;padding:64px 20px;font-family:'Segoe UI',sans-serif;">
+  <div style="max-width:640px;margin:0 auto;text-align:center;">
+    <div style="font-size:36px;margin-bottom:12px;">📅</div>
+    <h2 style="color:#d4af37;font-size:clamp(22px,5vw,30px);margin:0 0 12px 0;">Agende sua Visita</h2>
+    <p style="color:#ccc;font-size:clamp(14px,4vw,16px);line-height:1.7;margin:0 0 32px 0;">
+      Solicite uma visita técnica gratuita. Avaliamos o local e entregamos o orçamento detalhado no mesmo dia.
+    </p>
+
+    <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:20px;padding:32px;text-align:left;">
+
+      <div style="margin-bottom:20px;">
+        <label style="color:#fff;font-size:14px;font-weight:600;display:block;margin-bottom:8px;">📋 Tipo de serviço</label>
+        <select id="tipo-servico" style="width:100%;padding:14px 16px;border-radius:10px;border:1px solid #333;background:#222;color:#fff;font-size:15px;-webkit-appearance:none;">
+          <option value="">Selecione o serviço...</option>
+          <option>Assentamento de Porcelanato</option>
+          <option>Reforma de Banheiro</option>
+          <option>Revestimento de Fachada</option>
+          <option>Troca de Piso</option>
+          <option>Construção / Alvenaria</option>
+          <option>Reforma Completa</option>
+          <option>Outro serviço</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <label style="color:#fff;font-size:14px;font-weight:600;display:block;margin-bottom:8px;">📍 Bairro / Cidade</label>
+        <input type="text" id="bairro" placeholder="Ex: Boa Viagem, Recife - PE"
+          style="width:100%;padding:14px 16px;border-radius:10px;border:1px solid #333;background:#222;color:#fff;font-size:15px;box-sizing:border-box;"/>
+      </div>
+
+      <div style="margin-bottom:28px;">
+        <label style="color:#fff;font-size:14px;font-weight:600;display:block;margin-bottom:8px;">📆 Melhor período</label>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button onclick="selecionarPeriodo(this,'Manhã')" class="periodo-btn" style="flex:1;min-width:80px;padding:12px;border-radius:10px;border:1px solid #333;background:#222;color:#ccc;font-size:14px;cursor:pointer;">🌅 Manhã</button>
+          <button onclick="selecionarPeriodo(this,'Tarde')" class="periodo-btn" style="flex:1;min-width:80px;padding:12px;border-radius:10px;border:1px solid #333;background:#222;color:#ccc;font-size:14px;cursor:pointer;">☀️ Tarde</button>
+          <button onclick="selecionarPeriodo(this,'Qualquer horário')" class="periodo-btn" style="flex:1;min-width:80px;padding:12px;border-radius:10px;border:1px solid #333;background:#222;color:#ccc;font-size:14px;cursor:pointer;">🕐 Qualquer</button>
+        </div>
+      </div>
+
+      <button onclick="agendarVisita()" style="width:100%;background:#25D366;color:#fff;border:none;padding:18px;border-radius:12px;font-size:17px;font-weight:bold;cursor:pointer;letter-spacing:0.5px;">
+        📱 Agendar pelo WhatsApp
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<script>
+var periodoSelecionado = '';
+function selecionarPeriodo(btn, periodo){
+  document.querySelectorAll('.periodo-btn').forEach(function(b){
+    b.style.background='#222'; b.style.borderColor='#333'; b.style.color='#ccc';
+  });
+  btn.style.background='#d4af37'; btn.style.borderColor='#d4af37'; btn.style.color='#000'; btn.style.fontWeight='bold';
+  periodoSelecionado = periodo;
+}
+function agendarVisita(){
+  var servico = document.getElementById('tipo-servico').value || 'Não informado';
+  var bairro = document.getElementById('bairro').value || 'Não informado';
+  var periodo = periodoSelecionado || 'Qualquer horário';
+  var msg = 'Olá! Gostaria de agendar uma visita técnica.%0A%0A📋 Serviço: '+encodeURIComponent(servico)+'%0A📍 Local: '+encodeURIComponent(bairro)+'%0A📆 Período: '+encodeURIComponent(periodo)+'%0A%0AAguardo confirmação!';
+  window.open('https://wa.me/5581989807935?text='+msg,'_blank');
+}
+</script>
 
 <!-- PARCERIA -->
 <section id="parceria" style="background:#111;padding:64px 20px;font-family:'Segoe UI',sans-serif;">
@@ -437,17 +504,17 @@ window.addEventListener('DOMContentLoaded',function(){
          alt="Pedreiro Azulejista e Reformas"
          style="height:72px;width:72px;object-fit:cover;margin-bottom:16px;border-radius:14px;background:#1a1a1a"/>
 
-    <p style="color:#d4af37;font-weight:bold;font-size:17px;margin:0 0 4px 0;">Pedreiro Azulejista e Reformas</p>
-    <p style="color:#777;font-size:13px;margin:0 0 28px 0;">Recife — PE · Atendemos toda a Região Metropolitana</p>
+    <p style="color:#ffffff;font-weight:bold;font-size:18px;margin:0 0 4px 0;letter-spacing:0.5px;">Pedreiro Azulejista e Reformas</p>
+    <p style="color:#cccccc;font-size:14px;margin:0 0 28px 0;">Recife — PE · Atendemos toda a Região Metropolitana</p>
 
     <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:20px;">
-      <a href="#topo" style="color:#999;text-decoration:none;font-size:13px;">Início</a>
-      <a href="#servicos" style="color:#999;text-decoration:none;font-size:13px;">Serviços</a>
-      <a href="#galeria" style="color:#999;text-decoration:none;font-size:13px;">Portfólio</a>
-      <a href="#avaliacoes" style="color:#999;text-decoration:none;font-size:13px;">Avaliações</a>
-      <a href="#orcamento" style="color:#999;text-decoration:none;font-size:13px;">Orçamento</a>
-      <a href="#parceria" style="color:#999;text-decoration:none;font-size:13px;">Parceria</a>
-      <a href="#privacidade" style="color:#999;text-decoration:none;font-size:13px;">Privacidade</a>
+      <a href="#topo" style="color:#ffffff;text-decoration:none;font-size:13px;">Início</a>
+      <a href="#servicos" style="color:#ffffff;text-decoration:none;font-size:13px;">Serviços</a>
+      <a href="#galeria" style="color:#ffffff;text-decoration:none;font-size:13px;">Portfólio</a>
+      <a href="#avaliacoes" style="color:#ffffff;text-decoration:none;font-size:13px;">Avaliações</a>
+      <a href="#orcamento" style="color:#ffffff;text-decoration:none;font-size:13px;">Orçamento</a>
+      <a href="#agendamento" style="color:#fff;text-decoration:none;padding:10px 16px;border-radius:8px;font-size:15px;white-space:nowrap;">📅 Agendar</a><a href="#parceria" style="color:#ffffff;text-decoration:none;font-size:13px;">Parceria</a>
+      <a href="#ffffff;text-decoration:none;font-size:13px;">Privacidade</a>
     </div>
 
     <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:32px;">
@@ -458,13 +525,13 @@ window.addEventListener('DOMContentLoaded',function(){
 
     <div style="border-top:1px solid #1a1a1a;padding-top:20px;">
       <p style="color:#555;font-size:12px;margin:0 0 6px 0;">© 2026 Pedreiro Azulejista e Reformas · Todos os direitos reservados.</p>
-      <p style="color:#444;font-size:11px;margin:0 0 6px 0;">CNPJ: 62.602.238/0001-44 · Em conformidade com a LGPD · Lei 13.709/2018</p>
+      <p style="color:#dddddd;font-size:12px;margin:0 0 6px 0;">CNPJ: 62.602.238/0001-44 · LGPD · Lei 13.709/2018</p>
       <p style="color:#333;font-size:11px;margin:0;">
-        <a href="#privacidade" style="color:#555;text-decoration:none;">Política de Privacidade</a>
+        <a href="#privacidade" style="color:#aaaaaa;text-decoration:none;">Política de Privacidade</a>
         &nbsp;·&nbsp;
-        <a href="#parceria" style="color:#555;text-decoration:none;">Parcerias</a>
+        <a href="#parceria" style="color:#aaaaaa;text-decoration:none;">Parcerias</a>
         &nbsp;·&nbsp;
-        <a href="#topo" style="color:#555;text-decoration:none;">Voltar ao topo ↑</a>
+        <a href="#topo" style="color:#aaaaaa;text-decoration:none;">Voltar ao topo ↑</a>
       </p>
     </div>
 
@@ -472,6 +539,104 @@ window.addEventListener('DOMContentLoaded',function(){
 </footer>
 
 <a href="https://wa.me/5581989807935?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." class="float-wa"><i class="fab fa-whatsapp"></i></a>
+
+
+<!-- ASSISTENTE IA FLUTUANTE -->
+<div id="chat-bubble" onclick="toggleChat()" style="position:fixed;bottom:88px;right:20px;width:56px;height:56px;background:linear-gradient(135deg,#d4af37,#b8860b);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:9998;box-shadow:0 4px 20px rgba(212,175,55,0.4);font-size:24px;">
+  🤖
+</div>
+
+<div id="chat-box" style="display:none;position:fixed;bottom:160px;right:16px;width:min(340px,calc(100vw - 32px));background:#1a1a1a;border:1px solid #d4af37;border-radius:20px;z-index:9997;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5);font-family:'Segoe UI',sans-serif;">
+
+  <div style="background:linear-gradient(135deg,#d4af37,#b8860b);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="font-size:22px;">🤖</div>
+      <div>
+        <div style="color:#000;font-weight:bold;font-size:14px;">Assistente PA</div>
+        <div style="color:#333;font-size:11px;">● Online agora</div>
+      </div>
+    </div>
+    <span onclick="toggleChat()" style="color:#000;font-size:20px;cursor:pointer;font-weight:bold;">✕</span>
+  </div>
+
+  <div id="chat-msgs" style="padding:16px;height:260px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;">
+    <div style="background:#2a2a2a;color:#fff;padding:12px 14px;border-radius:12px 12px 12px 4px;font-size:14px;line-height:1.5;max-width:90%;">
+      👋 Olá! Sou o assistente da <strong>Pedreiro Azulejista e Reformas</strong>.<br><br>
+      Posso te ajudar com informações sobre serviços, orçamentos e agendamentos. Como posso ajudar?
+    </div>
+  </div>
+
+  <div style="display:flex;gap:8px;flex-wrap:wrap;padding:0 12px 10px;">
+    <button onclick="enviarResposta('Quero um orçamento')" style="background:#2a2a2a;color:#d4af37;border:1px solid #333;padding:7px 12px;border-radius:20px;font-size:12px;cursor:pointer;">💰 Orçamento</button>
+    <button onclick="enviarResposta('Quais serviços vocês fazem?')" style="background:#2a2a2a;color:#d4af37;border:1px solid #333;padding:7px 12px;border-radius:20px;font-size:12px;cursor:pointer;">🔨 Serviços</button>
+    <button onclick="enviarResposta('Onde vocês atendem?')" style="background:#2a2a2a;color:#d4af37;border:1px solid #333;padding:7px 12px;border-radius:20px;font-size:12px;cursor:pointer;">📍 Atendimento</button>
+    <button onclick="enviarResposta('Quero agendar uma visita')" style="background:#2a2a2a;color:#d4af37;border:1px solid #333;padding:7px 12px;border-radius:20px;font-size:12px;cursor:pointer;">📅 Agendar</button>
+  </div>
+
+  <div style="display:flex;gap:8px;padding:0 12px 16px;">
+    <input id="chat-input" type="text" placeholder="Digite sua dúvida..." onkeydown="if(event.key==='Enter')enviarMsg()"
+      style="flex:1;padding:12px 14px;border-radius:10px;border:1px solid #333;background:#222;color:#fff;font-size:14px;"/>
+    <button onclick="enviarMsg()" style="background:#d4af37;color:#000;border:none;padding:12px 16px;border-radius:10px;font-weight:bold;cursor:pointer;font-size:16px;">➤</button>
+  </div>
+</div>
+
+<script>
+function toggleChat(){
+  var box=document.getElementById('chat-box');
+  box.style.display=box.style.display==='none'?'block':'none';
+}
+var respostas = {
+  'orcamento': 'Para orçamentos, acesse a seção acima ou clique aqui 👉 https://wa.me/5581989807935?text=Quero+um+orçamento. Respondemos em até 1 hora! 😊',
+  'servicos': '🔨 Nossos serviços:
+• Assentamento de porcelanato e azulejo
+• Reforma de banheiro completa
+• Revestimento de fachadas
+• Construção e alvenaria
+• Reforma geral
+
+Qual te interessa?',
+  'atendimento': '📍 Atendemos Recife e toda a Região Metropolitana de PE. Faça seu agendamento e combinamos o horário da visita técnica!',
+  'agendar': '📅 Para agendar sua visita técnica gratuita, use o formulário acima ou fale diretamente: https://wa.me/5581989807935?text=Quero+agendar+uma+visita',
+  'preco': '💰 Os valores variam conforme o serviço e metragem. Solicite seu orçamento gratuito! Fazemos a visita técnica sem compromisso.',
+  'prazo': '⏱️ O prazo depende do serviço. Em média: banheiro 5-10 dias, porcelanato por cômodo 2-4 dias. Confirmamos na visita técnica.',
+  'default': '😊 Entendi! Para te ajudar melhor, fale diretamente com a gente pelo WhatsApp: https://wa.me/5581989807935'
+};
+function detectarIntencao(msg){
+  msg = msg.toLowerCase();
+  if(msg.includes('orçamento')||msg.includes('orcamento')||msg.includes('preço')||msg.includes('preco')||msg.includes('valor')||msg.includes('quanto')) return 'preco';
+  if(msg.includes('serviço')||msg.includes('servico')||msg.includes('faz')||msg.includes('trabalho')) return 'servicos';
+  if(msg.includes('onde')||msg.includes('atende')||msg.includes('região')||msg.includes('cidade')) return 'atendimento';
+  if(msg.includes('agendar')||msg.includes('visita')||msg.includes('marcar')) return 'agendar';
+  if(msg.includes('prazo')||msg.includes('tempo')||msg.includes('dias')) return 'prazo';
+  return 'default';
+}
+function adicionarMsg(texto, lado){
+  var msgs=document.getElementById('chat-msgs');
+  var div=document.createElement('div');
+  div.style.cssText=lado==='user'
+    ?'background:#d4af37;color:#000;padding:10px 14px;border-radius:12px 12px 4px 12px;font-size:14px;max-width:85%;align-self:flex-end;font-weight:500;'
+    :'background:#2a2a2a;color:#fff;padding:10px 14px;border-radius:12px 12px 12px 4px;font-size:14px;max-width:90%;line-height:1.5;white-space:pre-line;';
+  div.textContent=texto;
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+function enviarResposta(texto){
+  adicionarMsg(texto,'user');
+  setTimeout(function(){
+    adicionarMsg(respostas[detectarIntencao(texto)]||respostas.default,'bot');
+  },600);
+}
+function enviarMsg(){
+  var input=document.getElementById('chat-input');
+  var texto=input.value.trim();
+  if(!texto)return;
+  adicionarMsg(texto,'user');
+  input.value='';
+  setTimeout(function(){
+    adicionarMsg(respostas[detectarIntencao(texto)]||respostas.default,'bot');
+  },700);
+}
+</script>
 
 </body>
 </html>
