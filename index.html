@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-  <title>Pedreiro Azulejista e Reformas | Luiz Carlos | Recife - PE</title>
+  <title>Pedreiro Azulejista e Reformas v3 e Reformas | Luiz Carlos | Recife - PE</title>
   <meta name="description" content="Pedreiro azulejista especialista em reforma, revestimento e azulejamento em Recife. Nota 5.0 no Google. Solicite seu orçamento!"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -218,7 +218,7 @@
     /* ===== GALLERY ===== */
     .gallery-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
       gap: 16px;
       max-width: 500px; margin: 0 auto;
     }
@@ -349,20 +349,14 @@
     }
 
     /* ===== DESKTOP: grade 2 colunas ===== */
-    @media (min-width: 640px) {
+    @media (min-width: 900px) {
       .gallery-grid {
         grid-template-columns: 1fr 1fr;
-        max-width: 780px;
+        max-width: 900px;
       }
       .orcamento-grid {
         grid-template-columns: 1fr 1fr;
-        max-width: 620px;
-      }
-      .gallery-card-last {
-        grid-column: 1 / -1;
-        max-width: 360px;
-        margin: 0 auto;
-        width: 100%;
+        max-width: 680px;
       }
     }
   </style>
