@@ -16,13 +16,13 @@
       --dark3: #252525;
       --white: #ffffff;
       --gray: #aaa;
-      --light: #f5f5f5;
+      --light: #f0f0f0;
       --green: #25D366;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body { font-family: 'Open Sans', sans-serif; font-size: 16px; color: var(--dark); background: var(--white); overflow-x: hidden; }
 
-    /* === HEADER === */
+    /* HEADER */
     header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 9998;
       background: rgba(13,13,13,0.98);
@@ -30,31 +30,25 @@
       border-bottom: 2px solid rgba(200,150,12,0.4);
       padding: 10px 16px;
       display: flex; justify-content: space-between; align-items: center;
-      gap: 10px;
     }
-    .header-logo {
-      height: 60px;
-      width: auto;
-      object-fit: contain;
-      border-radius: 10px;
-    }
+    .header-logo { height: 56px; width: auto; object-fit: contain; border-radius: 10px; }
     .header-cta {
       background: var(--green); color: var(--white);
-      padding: 12px 18px; border-radius: 50px;
-      font-weight: 800; font-size: 14px; text-decoration: none;
+      padding: 13px 20px; border-radius: 50px;
+      font-weight: 800; font-size: 15px; text-decoration: none;
       display: flex; align-items: center; gap: 8px;
       box-shadow: 0 4px 15px rgba(37,211,102,0.4);
       white-space: nowrap;
     }
 
-    /* === HERO === */
+    /* HERO */
     .hero-cover {
       position: relative; width: 100%; height: 100vh;
-      min-height: 560px; overflow: hidden;
+      min-height: 580px; overflow: hidden;
     }
     .hero-cover img {
       width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
+      object-fit: cover; object-position: center top;
       display: block; filter: brightness(0.45);
     }
     .hero-cover-overlay {
@@ -65,17 +59,17 @@
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(200,150,12,0.25); border: 1px solid rgba(200,150,12,0.7);
-      color: var(--gold-light); padding: 8px 20px; border-radius: 50px;
+      background: rgba(200,150,12,0.25); border: 1.5px solid rgba(200,150,12,0.7);
+      color: var(--gold-light); padding: 9px 22px; border-radius: 50px;
       font-size: 13px; font-weight: 700; letter-spacing: 1px;
-      text-transform: uppercase; margin-bottom: 20px;
+      text-transform: uppercase; margin-bottom: 22px;
     }
     .hero-cover-overlay h1 {
       font-family: 'Montserrat', sans-serif; font-weight: 900;
-      font-size: clamp(32px, 8vw, 48px);
+      font-size: clamp(34px, 9vw, 52px);
       line-height: 1.1; color: var(--white);
       margin-bottom: 14px;
-      text-shadow: 0 2px 16px rgba(0,0,0,0.6);
+      text-shadow: 0 2px 16px rgba(0,0,0,0.7);
     }
     .hero-cover-overlay h1 .highlight {
       background: linear-gradient(135deg, var(--gold), var(--gold-light));
@@ -83,33 +77,33 @@
     }
     .hero-cover-overlay h1 .line2 {
       display: block; font-size: clamp(18px, 4.5vw, 26px);
-      color: rgba(255,255,255,0.9); font-weight: 600; margin-top: 8px;
+      color: rgba(255,255,255,0.9); font-weight: 600; margin-top: 10px;
     }
     .hero-desc {
-      color: rgba(255,255,255,0.9); font-size: clamp(14px, 3.5vw, 17px);
-      line-height: 1.7; margin-bottom: 28px; max-width: 480px;
+      color: rgba(255,255,255,0.92); font-size: clamp(15px, 3.8vw, 18px);
+      line-height: 1.7; margin-bottom: 28px; max-width: 500px;
       text-shadow: 0 1px 8px rgba(0,0,0,0.5);
     }
     .hero-rating {
       display: flex; align-items: center; justify-content: center;
-      gap: 8px; margin-bottom: 28px; flex-wrap: wrap;
+      gap: 8px; margin-bottom: 30px; flex-wrap: wrap;
     }
-    .hero-stars { color: var(--gold-light); font-size: 22px; letter-spacing: 3px; }
-    .hero-rating-text { color: rgba(255,255,255,0.95); font-size: 16px; font-weight: 700; }
-    .hero-btns { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 340px; }
+    .hero-stars { color: var(--gold-light); font-size: 24px; letter-spacing: 3px; }
+    .hero-rating-text { color: rgba(255,255,255,0.95); font-size: 17px; font-weight: 700; }
+    .hero-btns { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 360px; }
     .btn-primary {
       display: flex; align-items: center; justify-content: center; gap: 10px;
       background: linear-gradient(135deg, #1ebe5b, var(--green));
-      color: var(--white); padding: 18px 32px; border-radius: 60px;
-      font-size: 17px; font-weight: 800; text-decoration: none;
+      color: var(--white); padding: 20px 32px; border-radius: 60px;
+      font-size: 18px; font-weight: 800; text-decoration: none;
       box-shadow: 0 10px 30px rgba(37,211,102,0.45);
       width: 100%;
     }
     .btn-outline {
       display: flex; align-items: center; justify-content: center; gap: 8px;
       color: var(--gold-light); border: 2px solid rgba(200,150,12,0.7);
-      padding: 14px 28px; border-radius: 60px;
-      font-size: 15px; font-weight: 700; text-decoration: none;
+      padding: 15px 28px; border-radius: 60px;
+      font-size: 16px; font-weight: 700; text-decoration: none;
       width: 100%;
     }
     .hero-scroll {
@@ -120,165 +114,157 @@
     }
     @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
 
-    /* === TRUST BAR === */
+    /* TRUST BAR */
     .trust-bar { background: linear-gradient(135deg, var(--gold), var(--gold-light)); }
     .trust-track { display: flex; }
     .trust-item {
-      flex: 1; padding: 18px 8px; text-align: center;
+      flex: 1; padding: 20px 8px; text-align: center;
       border-right: 1px solid rgba(0,0,0,0.12);
     }
     .trust-item:last-child { border-right: none; }
-    .trust-num { font-family:'Montserrat',sans-serif; font-weight:900; font-size: clamp(20px,5vw,28px); color:var(--dark); line-height:1; }
-    .trust-label { font-size: clamp(9px,2.2vw,11px); color:rgba(0,0,0,0.7); font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-top:4px; }
+    .trust-num { font-family:'Montserrat',sans-serif; font-weight:900; font-size: clamp(22px,5.5vw,30px); color:var(--dark); line-height:1; }
+    .trust-label { font-size: clamp(10px,2.5vw,12px); color:rgba(0,0,0,0.7); font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-top:4px; }
 
-    /* === SECTION === */
-    .section { padding: 60px 16px; }
+    /* SECTION */
+    .section { padding: 64px 18px; }
     .section.bg-dark { background: var(--dark2); }
     .section.bg-light { background: var(--light); }
-    .section-header { text-align: center; margin-bottom: 40px; }
+    .section-header { text-align: center; margin-bottom: 44px; }
     .section-tag {
       display: inline-block; background: rgba(200,150,12,0.15);
       color: var(--gold); border: 1px solid rgba(200,150,12,0.4);
-      padding: 6px 16px; border-radius: 50px;
+      padding: 7px 18px; border-radius: 50px;
       font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
       text-transform: uppercase; margin-bottom: 14px;
     }
     .section-header h2 {
       font-family: 'Montserrat', sans-serif; font-weight: 900;
-      font-size: clamp(24px, 6vw, 32px); line-height: 1.2; margin-bottom: 12px;
+      font-size: clamp(26px, 6.5vw, 34px); line-height: 1.2; margin-bottom: 12px;
     }
     .section-header h2 .g { color: var(--gold); }
     .section.bg-dark .section-header h2 { color: var(--white); }
-    .section-header p { color: var(--gray); font-size: 15px; max-width: 460px; margin: 0 auto; line-height: 1.7; }
+    .section-header p { color: var(--gray); font-size: 16px; max-width: 460px; margin: 0 auto; line-height: 1.7; }
 
-    /* === SERVICES === */
+    /* SERVICES */
     .services-grid {
       display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 12px; max-width: 560px; margin: 0 auto;
+      gap: 14px; max-width: 580px; margin: 0 auto;
     }
     .service-card {
       background: var(--dark3); border: 1px solid rgba(200,150,12,0.18);
-      border-radius: 16px; padding: 22px 14px; text-align: center;
+      border-radius: 18px; padding: 24px 16px; text-align: center;
     }
     .service-icon {
-      width: 54px; height: 54px;
+      width: 56px; height: 56px;
       background: linear-gradient(135deg, rgba(200,150,12,0.22), rgba(244,184,0,0.1));
       border-radius: 14px; display: flex; align-items: center;
-      justify-content: center; margin: 0 auto 12px; font-size: 24px;
+      justify-content: center; margin: 0 auto 14px; font-size: 26px;
     }
-    .service-card h3 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; color:var(--white); margin-bottom:6px; line-height:1.3; }
-    .service-card p { font-size:13px; color:var(--gray); line-height:1.5; }
+    .service-card h3 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:var(--white); margin-bottom:7px; line-height:1.3; }
+    .service-card p { font-size:14px; color:var(--gray); line-height:1.5; }
 
-    /* === GALLERY === */
+    /* GALLERY */
     .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      max-width: 700px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 14px; max-width: 720px; margin: 0 auto;
     }
     .gallery-card {
-      background: var(--dark3); border-radius: 14px; overflow: hidden;
+      background: var(--dark3); border-radius: 16px; overflow: hidden;
       border: 1px solid rgba(200,150,12,0.15);
       display: flex; flex-direction: column;
     }
     .gallery-card img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      display: block;
+      width: 100%; aspect-ratio: 4/3;
+      object-fit: cover; display: block;
     }
     .gallery-card-body {
-      padding: 12px 12px 14px; flex: 1;
-      display: flex; flex-direction: column; gap: 10px;
+      padding: 14px 14px 16px; flex: 1;
+      display: flex; flex-direction: column; gap: 12px;
     }
     .gallery-card-body p {
-      font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.5; flex: 1;
+      font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.55; flex: 1;
     }
     .gallery-cta {
-      display: flex; align-items: center; justify-content: center; gap: 6px;
+      display: flex; align-items: center; justify-content: center; gap: 7px;
       background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: var(--dark); padding: 11px 14px; border-radius: 30px;
-      font-size: 13px; font-weight: 800; text-decoration: none; width: 100%;
+      color: var(--dark); padding: 13px 14px; border-radius: 30px;
+      font-size: 14px; font-weight: 800; text-decoration: none; width: 100%;
     }
 
-    /* === ORÇAMENTO === */
+    /* ORÇAMENTO */
     .orcamento-grid {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 14px; max-width: 560px; margin: 0 auto 32px;
+      gap: 16px; max-width: 580px; margin: 0 auto 36px;
     }
     .orc-card {
       background: var(--dark3); border: 1px solid rgba(200,150,12,0.25);
-      border-radius: 16px; padding: 26px 16px; text-align: center;
+      border-radius: 18px; padding: 28px 18px; text-align: center;
     }
-    .orc-icon { font-size: 34px; margin-bottom: 12px; }
-    .orc-card h3 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:15px; color:var(--gold-light); margin-bottom:10px; line-height:1.3; }
-    .orc-card p { font-size:13px; color:var(--gray); line-height:1.6; }
+    .orc-icon { font-size: 36px; margin-bottom: 14px; }
+    .orc-card h3 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:16px; color:var(--gold-light); margin-bottom:10px; line-height:1.3; }
+    .orc-card p { font-size:14px; color:var(--gray); line-height:1.6; }
     .orc-badge {
-      display: inline-block; margin-top: 12px;
+      display: inline-block; margin-top: 14px;
       background: rgba(200,150,12,0.15); border: 1px solid rgba(200,150,12,0.4);
-      color: var(--gold); padding: 5px 12px; border-radius: 20px;
-      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--gold); padding: 6px 14px; border-radius: 20px;
+      font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
     }
     .orc-cta-wrap { text-align: center; }
 
-    /* === REVIEWS === */
-    .reviews-grid { display: flex; flex-direction: column; gap: 16px; max-width: 560px; margin: 0 auto; }
+    /* REVIEWS */
+    .reviews-grid { display: flex; flex-direction: column; gap: 16px; max-width: 580px; margin: 0 auto; }
     .review-card {
       background: var(--dark3); border: 1px solid rgba(200,150,12,0.18);
-      border-radius: 16px; padding: 22px 18px;
+      border-radius: 18px; padding: 24px 20px;
     }
-    .review-top { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .review-top { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
     .review-avatar {
-      width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+      width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0;
       background: linear-gradient(135deg, var(--gold), var(--gold-light));
       display: flex; align-items: center; justify-content: center;
-      font-family:'Montserrat',sans-serif; font-weight:900; font-size:20px; color:var(--dark);
+      font-family:'Montserrat',sans-serif; font-weight:900; font-size:22px; color:var(--dark);
     }
-    .review-name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:16px; color:var(--white); }
-    .review-stars { color:var(--gold-light); font-size:15px; margin-top:2px; }
-    .review-text { font-size:15px; color:rgba(255,255,255,0.75); line-height:1.7; font-style:italic; }
+    .review-name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:17px; color:var(--white); }
+    .review-stars { color:var(--gold-light); font-size:16px; margin-top:3px; }
+    .review-text { font-size:15px; color:rgba(255,255,255,0.78); line-height:1.7; font-style:italic; }
 
-    /* === CTA FINAL === */
+    /* CTA FINAL */
     .cta-final {
       background: linear-gradient(135deg, var(--dark), #1a1200);
-      padding: 60px 20px; text-align: center;
+      padding: 64px 20px; text-align: center;
       border-top: 1px solid rgba(200,150,12,0.25);
     }
-    .cta-final h2 { font-family:'Montserrat',sans-serif; font-weight:900; font-size:clamp(22px,6vw,30px); color:var(--white); margin-bottom:14px; line-height:1.2; }
+    .cta-final h2 { font-family:'Montserrat',sans-serif; font-weight:900; font-size:clamp(24px,6.5vw,32px); color:var(--white); margin-bottom:14px; line-height:1.2; }
     .cta-final h2 .g { color: var(--gold-light); }
-    .cta-final p { color:rgba(255,255,255,0.65); font-size:15px; margin-bottom:32px; line-height:1.7; max-width:460px; margin-left:auto; margin-right:auto; }
-    .cta-final .btn-primary { max-width: 340px; margin: 0 auto; }
+    .cta-final p { color:rgba(255,255,255,0.65); font-size:16px; margin-bottom:34px; line-height:1.7; max-width:480px; margin-left:auto; margin-right:auto; }
+    .cta-final .btn-primary { max-width: 360px; margin: 0 auto; }
 
-    /* === FOOTER === */
+    /* FOOTER */
     footer {
-      background: #080808; padding: 28px 20px; text-align: center;
+      background: #080808; padding: 32px 20px; text-align: center;
       border-top: 1px solid rgba(200,150,12,0.15);
     }
-    footer img { height: 52px; margin-bottom: 14px; border-radius: 10px; }
-    footer p { color:rgba(255,255,255,0.35); font-size:13px; line-height:1.8; }
+    footer img { height: 56px; margin-bottom: 16px; border-radius: 10px; }
+    footer p { color:rgba(255,255,255,0.35); font-size:14px; line-height:1.8; }
 
-    /* === FLOATING WA === */
+    /* FLOATING WA */
     .float-wa {
       position: fixed; bottom: 22px; right: 18px; z-index: 9999;
       background: var(--green); color: var(--white);
-      width: 62px; height: 62px; border-radius: 50%;
+      width: 65px; height: 65px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-size: 30px; text-decoration: none;
+      font-size: 32px; text-decoration: none;
       box-shadow: 0 8px 24px rgba(37,211,102,0.5);
       animation: pulse-wa 2.5s infinite;
     }
     @keyframes pulse-wa {
       0%,100%{box-shadow:0 8px 24px rgba(37,211,102,0.5)}
-      50%{box-shadow:0 8px 36px rgba(37,211,102,0.8), 0 0 0 12px rgba(37,211,102,0.1)}
+      50%{box-shadow:0 8px 36px rgba(37,211,102,0.8), 0 0 0 14px rgba(37,211,102,0.1)}
     }
 
-    /* === MOBILE EXTRA === */
-    @media (max-width: 400px) {
-      .services-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 380px) {
       .gallery-grid { grid-template-columns: 1fr; }
       .orcamento-grid { grid-template-columns: 1fr; }
-      .trust-label { font-size: 9px; }
     }
   </style>
 </head>
@@ -377,7 +363,7 @@
   </div>
 </section>
 
-<!-- PORTFÓLIO -->
+<!-- PORTFÓLIO — somente fotos reais de obra -->
 <section class="section bg-light" id="portfolio">
   <div class="section-header">
     <div class="section-tag">Portfólio</div>
@@ -397,7 +383,7 @@
     <div class="gallery-card">
       <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/df9fc5b1d_whatsapp_image_3175898566134096.jpg" alt="Seixos batente da porta" loading="lazy"/>
       <div class="gallery-card-body">
-        <p>Seixos no batente da porta — detalhe preciso e acabamento impecável.</p>
+        <p>Seixos no batente da porta — acabamento detalhado e preciso.</p>
         <a href="https://wa.me/5581999999999?text=Quero+revestimento+em+seixos!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
       </div>
     </div>
@@ -413,7 +399,7 @@
     <div class="gallery-card">
       <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/a14398bf3_whatsapp_image_844384774993025.jpg" alt="Porcelanato madeirado fachada" loading="lazy"/>
       <div class="gallery-card-body">
-        <p>Porcelanato madeirado em fachada — resultado moderno e valorizado.</p>
+        <p>Porcelanato madeirado em fachada — moderno e valorizado.</p>
         <a href="https://wa.me/5581999999999?text=Quero+porcelanato+na+fachada!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
       </div>
     </div>
@@ -430,7 +416,7 @@
       <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/ad00ae8db_whatsapp_image_1614634747328807.jpg" alt="Instalação cobertura telha" loading="lazy"/>
       <div class="gallery-card-body">
         <p>Instalação de cobertura com telha — equipe especializada e serviço seguro.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+servi%C3%A7o+de+cobertura!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
+        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
       </div>
     </div>
 
@@ -438,7 +424,7 @@
       <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/377ec64e4_whatsapp_image_1171696861813192.jpg" alt="Estrutura telhado madeira" loading="lazy"/>
       <div class="gallery-card-body">
         <p>Estrutura de telhado com ripas — base sólida para longa durabilidade.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+servi%C3%A7o+de+cobertura!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
+        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
       </div>
     </div>
 
@@ -446,23 +432,7 @@
       <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/db2015e89_whatsapp_image_873174448508483.jpg" alt="Telha fibrocimento instalada" loading="lazy"/>
       <div class="gallery-card-body">
         <p>Telha fibrocimento instalada — acabamento limpo e sem infiltrações.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+servi%C3%A7o+de+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/fc315697f_whatsapp_image_1321506402798293.jpg" alt="Reboco fachada andaime" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Reboco em fachada com andaime — serviço em altura com segurança total.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+reforma+de+fachada!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/4e6c40770_whatsapp_image_1345315717535209.jpg" alt="Estrutura madeira nova cobertura" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Estrutura de madeira para nova cobertura — reforma com qualidade garantida.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+servi%C3%A7o+de+cobertura!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
+        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
       </div>
     </div>
 
@@ -478,111 +448,15 @@
       <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/cc605ef8c_whatsapp_image_2362279414269736.jpg" alt="Cobertura fibrocimento finalizada" loading="lazy"/>
       <div class="gallery-card-body">
         <p>Cobertura finalizada com telha fibrocimento — durabilidade e proteção.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+servi%C3%A7o+de+cobertura!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
+        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
       </div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/2646f9a01_whatsapp_image_1760688091591531.jpg" alt="Reforma e revestimento" loading="lazy"/>
+    <div class="gallery-card" style="grid-column: 1 / -1; max-width: 340px; margin: 0 auto; width: 100%;">
+      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/4e6c40770_whatsapp_image_1345315717535209.jpg" alt="Estrutura madeira nova cobertura" loading="lazy"/>
       <div class="gallery-card-body">
-        <p>Reforma e revestimento — qualidade garantida em cada detalhe.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/4fac1b125_whatsapp_image_1009440084890988.jpg" alt="Acabamento revestimento profissional" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Acabamento profissional — atenção aos mínimos detalhes em cada obra.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/6e952f62c_whatsapp_image_2170743753497093.jpg" alt="Projeto reforma residencial" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Reforma residencial — resultado surpreendente e moderno.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/9d879737d_whatsapp_image_2833554886993778.jpg" alt="Azulejamento acabamento" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Azulejamento e acabamento — perfeição em cada m².</p>
-        <a href="https://wa.me/5581999999999?text=Quero+azulejamento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/a6914c806_whatsapp_image_1035282559077745.jpg" alt="Reforma revestimento externo" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Reforma e revestimento externo — transformação com qualidade.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/a9543cdf4_whatsapp_image_1377302627553675.jpg" alt="Acabamento premium obra" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Acabamento premium — resultado que impressiona e valoriza o imóvel.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/c373a0eca_whatsapp_image_1305752961639360.jpg" alt="Alvenaria revestimento reforma" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Alvenaria e revestimento — obra entregue no prazo combinado.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/d09576bb2_whatsapp_image_890903173272324.jpg" alt="Serviço pedreiro azulejista" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Pedreiro e azulejista — profissionalismo do início ao fim.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/f3d79171e_whatsapp_image_2378246219666051.jpg" alt="Revestimento acabamento qualidade" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Revestimento e acabamento — qualidade que se vê e se sente.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/f6b93c9d8_whatsapp_image_965406513158911.jpg" alt="Reforma residencial completa" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Reforma residencial completa — transformação total com acabamento impecável.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+reforma+completa!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/2ffcc1852_whatsapp_image_1319279599645900.jpg" alt="Projeto de obra concluído" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Obra concluída com acabamento diferenciado — cada projeto é único.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/b498a5244_whatsapp_image_1019891007364503.jpg" alt="Projeto concluído com qualidade" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Projeto concluído com qualidade — satisfação garantida do cliente.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
-    </div>
-
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/7ada4f835_whatsapp_image_1337230815212774.jpg" alt="Obra de reforma e revestimento" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Reforma com revestimento de alto padrão — entrega com excelência.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
+        <p>Estrutura de madeira para nova cobertura — reforma com qualidade total.</p>
+        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
       </div>
     </div>
 
@@ -610,9 +484,9 @@
       <span class="orc-badge">Taxa Mínima</span>
     </div>
   </div>
-  <br/>
+  <br/><br/>
   <div class="orc-cta-wrap">
-    <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn-primary" style="max-width:340px;margin:0 auto;">
+    <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn-primary" style="max-width:360px;margin:0 auto;">
       <i class="fab fa-whatsapp"></i> Solicitar Orçamento Agora
     </a>
   </div>
