@@ -2,640 +2,257 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-  <title>Pedreiro Azulejista e Reformas v3 e Reformas | Luiz Carlos | Recife - PE</title>
-  <meta name="description" content="Pedreiro azulejista especialista em reforma, revestimento e azulejamento em Recife. Nota 5.0 no Google. Solicite seu orçamento!"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luiz Carlos | Pedreiro Azulejista | Recife PE</title>
+  <meta name="description" content="Pedreiro azulejista especialista em reforma, revestimento e azulejamento em Recife. Nota 5.0 no Google."/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    :root {
-      --gold: #c8960c;
-      --gold-light: #f4b800;
-      --dark: #0d0d0d;
-      --dark2: #1a1a1a;
-      --dark3: #252525;
-      --white: #ffffff;
-      --gray: #aaa;
-      --light: #f0f0f0;
-      --green: #25D366;
-    }
+    :root{--gold:#c8960c;--gold-light:#f4b800;--dark:#0d0d0d;--dark2:#1a1a1a;--dark3:#252525;--white:#fff;--gray:#aaa;--light:#f0f0f0;--green:#25D366}
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+    body{font-family:'Open Sans',sans-serif;background:var(--white);overflow-x:hidden;-webkit-text-size-adjust:100%}
 
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+    /* HEADER */
+    header{position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(13,13,13,0.97);border-bottom:2px solid rgba(200,150,12,0.4);padding:10px 16px;display:flex;justify-content:space-between;align-items:center;min-height:68px}
+    .logo{height:54px;border-radius:10px;object-fit:contain}
+    .header-btn{background:var(--green);color:#fff;padding:13px 18px;border-radius:50px;font-weight:800;font-size:15px;text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap;min-height:48px}
 
-    html { font-size: 16px; }
+    /* HERO */
+    .hero{position:relative;width:100%;height:100vh;min-height:580px;overflow:hidden}
+    .hero img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.45)}
+    .hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:88px 20px 40px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,150,12,0.2);border:1.5px solid rgba(200,150,12,0.7);color:var(--gold-light);padding:9px 20px;border-radius:50px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:18px}
+    .hero-content h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(30px,8vw,50px);color:#fff;line-height:1.1;margin-bottom:12px;text-shadow:0 2px 16px rgba(0,0,0,0.7)}
+    .hero-content h1 span{background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-sub{display:block;font-size:clamp(15px,4vw,22px);color:rgba(255,255,255,0.9);font-weight:600;margin-top:8px;-webkit-text-fill-color:rgba(255,255,255,0.9)}
+    .hero-desc{color:rgba(255,255,255,0.9);font-size:clamp(14px,3.5vw,17px);line-height:1.65;margin-bottom:20px;max-width:460px}
+    .hero-stars{color:var(--gold-light);font-size:22px;letter-spacing:3px;margin-bottom:24px}
+    .hero-stars span{color:rgba(255,255,255,0.9);font-size:15px;font-weight:700;vertical-align:middle;margin-left:6px}
+    .hero-btns{display:flex;flex-direction:column;gap:12px;width:100%;max-width:340px}
+    .btn-green{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#1ebe5b,var(--green));color:#fff;padding:18px 28px;border-radius:60px;font-size:17px;font-weight:800;text-decoration:none;width:100%;min-height:56px}
+    .btn-gold-outline{display:flex;align-items:center;justify-content:center;gap:8px;color:var(--gold-light);border:2px solid rgba(200,150,12,0.7);padding:15px 24px;border-radius:60px;font-size:15px;font-weight:700;text-decoration:none;width:100%;min-height:52px}
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: var(--dark);
-      background: var(--white);
-      overflow-x: hidden;
-      -webkit-text-size-adjust: 100%;
-    }
+    /* TRUST */
+    .trust{background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex}
+    .trust-item{flex:1;padding:18px 6px;text-align:center;border-right:1px solid rgba(0,0,0,0.12)}
+    .trust-item:last-child{border-right:none}
+    .trust-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(20px,5vw,28px);color:#0d0d0d}
+    .trust-label{font-size:clamp(9px,2.2vw,11px);color:rgba(0,0,0,0.7);font-weight:700;text-transform:uppercase;margin-top:3px}
 
-    /* ===== HEADER ===== */
-    header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 9998;
-      background: rgba(13,13,13,0.98);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 2px solid rgba(200,150,12,0.4);
-      padding: 10px 16px;
-      display: flex; justify-content: space-between; align-items: center;
-      min-height: 68px;
-    }
-    .header-logo {
-      height: 52px; width: auto;
-      object-fit: contain; border-radius: 10px;
-      flex-shrink: 0;
-    }
-    .header-cta {
-      background: var(--green); color: var(--white);
-      padding: 14px 20px; border-radius: 50px;
-      font-weight: 800; font-size: 15px; text-decoration: none;
-      display: flex; align-items: center; gap: 8px;
-      box-shadow: 0 4px 15px rgba(37,211,102,0.4);
-      white-space: nowrap;
-      min-height: 48px;
-      touch-action: manipulation;
-    }
+    /* SECTIONS */
+    .sec{padding:56px 16px}
+    .sec-dark{background:var(--dark2)}
+    .sec-light{background:var(--light)}
+    .sec-hdr{text-align:center;margin-bottom:40px}
+    .sec-tag{display:inline-block;background:rgba(200,150,12,0.15);color:var(--gold);border:1px solid rgba(200,150,12,0.4);padding:7px 18px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px}
+    .sec-hdr h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(24px,6vw,32px);line-height:1.2;margin-bottom:10px}
+    .sec-hdr h2 .g{color:var(--gold)}
+    .sec-dark .sec-hdr h2{color:#fff}
+    .sec-hdr p{color:var(--gray);font-size:15px;max-width:460px;margin:0 auto;line-height:1.7}
 
-    /* ===== HERO ===== */
-    .hero-cover {
-      position: relative; width: 100%;
-      height: 100svh; min-height: 600px;
-      overflow: hidden;
-    }
-    .hero-cover img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center top;
-      display: block; filter: brightness(0.45);
-    }
-    .hero-cover-overlay {
-      position: absolute; inset: 0;
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      text-align: center;
-      padding: 80px 20px 40px;
-      gap: 0;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(200,150,12,0.25);
-      border: 1.5px solid rgba(200,150,12,0.7);
-      color: var(--gold-light);
-      padding: 9px 20px; border-radius: 50px;
-      font-size: 12px; font-weight: 700; letter-spacing: 1px;
-      text-transform: uppercase; margin-bottom: 18px;
-    }
-    .hero-cover-overlay h1 {
-      font-family: 'Montserrat', sans-serif; font-weight: 900;
-      font-size: clamp(30px, 8vw, 52px);
-      line-height: 1.1; color: var(--white);
-      margin-bottom: 12px;
-      text-shadow: 0 2px 16px rgba(0,0,0,0.7);
-    }
-    .hero-cover-overlay h1 .highlight {
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-cover-overlay h1 .line2 {
-      display: block;
-      font-size: clamp(16px, 4vw, 24px);
-      color: rgba(255,255,255,0.9);
-      font-weight: 600; margin-top: 8px;
-    }
-    .hero-desc {
-      color: rgba(255,255,255,0.9);
-      font-size: clamp(14px, 3.5vw, 17px);
-      line-height: 1.65; margin-bottom: 20px;
-      max-width: 480px;
-      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
-    }
-    .hero-rating {
-      display: flex; align-items: center; justify-content: center;
-      gap: 8px; margin-bottom: 24px; flex-wrap: wrap;
-    }
-    .hero-stars { color: var(--gold-light); font-size: 22px; letter-spacing: 3px; }
-    .hero-rating-text { color: rgba(255,255,255,0.95); font-size: 15px; font-weight: 700; }
+    /* SERVICES */
+    .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px;margin:0 auto}
+    .svc-card{background:var(--dark3);border:1px solid rgba(200,150,12,0.18);border-radius:16px;padding:22px 14px;text-align:center}
+    .svc-icon{width:52px;height:52px;background:rgba(200,150,12,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:24px}
+    .svc-card h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:#fff;margin-bottom:6px;line-height:1.3}
+    .svc-card p{font-size:13px;color:var(--gray);line-height:1.5}
 
-    .hero-btns {
-      display: flex; flex-direction: column; align-items: center;
-      gap: 12px; width: 100%; max-width: 340px;
-    }
-    .btn-primary {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      background: linear-gradient(135deg, #1ebe5b, var(--green));
-      color: var(--white);
-      padding: 18px 28px; border-radius: 60px;
-      font-size: 17px; font-weight: 800; text-decoration: none;
-      box-shadow: 0 10px 30px rgba(37,211,102,0.45);
-      width: 100%; min-height: 56px;
-      touch-action: manipulation;
-    }
-    .btn-outline {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      color: var(--gold-light);
-      border: 2px solid rgba(200,150,12,0.7);
-      padding: 15px 24px; border-radius: 60px;
-      font-size: 15px; font-weight: 700; text-decoration: none;
-      width: 100%; min-height: 52px;
-      touch-action: manipulation;
-    }
-    .hero-scroll {
-      position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-      color: rgba(255,255,255,0.45); font-size: 12px;
-      display: flex; flex-direction: column; align-items: center; gap: 5px;
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%,100%{transform:translateX(-50%) translateY(0)}
-      50%{transform:translateX(-50%) translateY(8px)}
-    }
+    /* GALLERY — mobile: 1 coluna */
+    .gallery{display:flex;flex-direction:column;gap:16px;max-width:500px;margin:0 auto}
+    .g-card{background:var(--dark3);border-radius:16px;overflow:hidden;border:1px solid rgba(200,150,12,0.15)}
+    .g-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+    .g-body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:12px}
+    .g-body p{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.6}
+    .g-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#0d0d0d;padding:14px;border-radius:50px;font-size:15px;font-weight:800;text-decoration:none;min-height:52px}
 
-    /* ===== TRUST BAR ===== */
-    .trust-bar { background: linear-gradient(135deg, var(--gold), var(--gold-light)); }
-    .trust-track { display: flex; }
-    .trust-item {
-      flex: 1; padding: 16px 6px; text-align: center;
-      border-right: 1px solid rgba(0,0,0,0.12);
-    }
-    .trust-item:last-child { border-right: none; }
-    .trust-num {
-      font-family:'Montserrat',sans-serif; font-weight:900;
-      font-size: clamp(20px,5vw,28px); color:var(--dark); line-height:1;
-    }
-    .trust-label {
-      font-size: clamp(9px,2.2vw,11px); color:rgba(0,0,0,0.7);
-      font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-top:4px;
-    }
+    /* ORÇAMENTO */
+    .orc-grid{display:flex;flex-direction:column;gap:16px;max-width:500px;margin:0 auto 36px}
+    .orc-card{background:var(--dark3);border:1px solid rgba(200,150,12,0.25);border-radius:16px;padding:28px 20px;text-align:center}
+    .orc-icon{font-size:38px;margin-bottom:14px}
+    .orc-card h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:var(--gold-light);margin-bottom:10px;line-height:1.3}
+    .orc-card p{font-size:15px;color:var(--gray);line-height:1.65}
+    .orc-badge{display:inline-block;margin-top:14px;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.4);color:var(--gold);padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700;text-transform:uppercase}
 
-    /* ===== SECTION ===== */
-    .section { padding: 56px 16px; }
-    .section.bg-dark { background: var(--dark2); }
-    .section.bg-light { background: var(--light); }
-    .section-header { text-align: center; margin-bottom: 40px; }
-    .section-tag {
-      display: inline-block;
-      background: rgba(200,150,12,0.15);
-      color: var(--gold); border: 1px solid rgba(200,150,12,0.4);
-      padding: 7px 18px; border-radius: 50px;
-      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; margin-bottom: 14px;
-    }
-    .section-header h2 {
-      font-family: 'Montserrat', sans-serif; font-weight: 900;
-      font-size: clamp(24px, 6vw, 34px); line-height: 1.2; margin-bottom: 12px;
-    }
-    .section-header h2 .g { color: var(--gold); }
-    .section.bg-dark .section-header h2 { color: var(--white); }
-    .section-header p { color: var(--gray); font-size: 15px; max-width: 480px; margin: 0 auto; line-height: 1.7; }
+    /* REVIEWS */
+    .rev-grid{display:flex;flex-direction:column;gap:16px;max-width:500px;margin:0 auto}
+    .rev-card{background:var(--dark3);border:1px solid rgba(200,150,12,0.18);border-radius:16px;padding:24px 18px}
+    .rev-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+    .rev-av{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:22px;color:#0d0d0d;flex-shrink:0}
+    .rev-name{font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;color:#fff}
+    .rev-stars{color:var(--gold-light);font-size:15px;margin-top:2px}
+    .rev-text{font-size:15px;color:rgba(255,255,255,0.78);line-height:1.7;font-style:italic}
 
-    /* ===== SERVICES ===== */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px; max-width: 600px; margin: 0 auto;
-    }
-    .service-card {
-      background: var(--dark3);
-      border: 1px solid rgba(200,150,12,0.18);
-      border-radius: 18px; padding: 22px 14px; text-align: center;
-    }
-    .service-icon {
-      width: 54px; height: 54px;
-      background: linear-gradient(135deg, rgba(200,150,12,0.22), rgba(244,184,0,0.1));
-      border-radius: 14px; display: flex; align-items: center;
-      justify-content: center; margin: 0 auto 12px; font-size: 26px;
-    }
-    .service-card h3 {
-      font-family:'Montserrat',sans-serif; font-weight:700;
-      font-size: 14px; color:var(--white); margin-bottom:7px; line-height:1.3;
-    }
-    .service-card p { font-size:13px; color:var(--gray); line-height:1.5; }
+    /* CTA FINAL */
+    .cta-sec{background:linear-gradient(135deg,#0d0d0d,#1a1200);padding:60px 20px;text-align:center;border-top:1px solid rgba(200,150,12,0.25)}
+    .cta-sec h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(22px,6vw,32px);color:#fff;margin-bottom:14px;line-height:1.2}
+    .cta-sec h2 .g{color:var(--gold-light)}
+    .cta-sec p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:34px;line-height:1.7;max-width:460px;margin-left:auto;margin-right:auto}
+    .cta-sec .btn-green{max-width:360px;margin:0 auto;font-size:18px;padding:20px 28px}
 
-    /* ===== GALLERY ===== */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr !important;
-      gap: 16px;
-      max-width: 500px; margin: 0 auto;
-    }
-    .gallery-card {
-      background: var(--dark3); border-radius: 18px; overflow: hidden;
-      border: 1px solid rgba(200,150,12,0.18);
-      display: flex; flex-direction: column;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-    }
-    .gallery-card img {
-      width: 100%; aspect-ratio: 16/10;
-      object-fit: cover; display: block;
-    }
-    .gallery-card-body {
-      padding: 16px 16px 18px; flex: 1;
-      display: flex; flex-direction: column; gap: 14px;
-    }
-    .gallery-card-body p {
-      font-size: 15px; color: rgba(255,255,255,0.85);
-      line-height: 1.6; flex: 1;
-    }
-    .gallery-cta {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: var(--dark); padding: 15px 14px; border-radius: 50px;
-      font-size: 15px; font-weight: 800; text-decoration: none;
-      width: 100%; min-height: 52px;
-      touch-action: manipulation;
-    }
+    /* FOOTER */
+    footer{background:#080808;padding:36px 20px;text-align:center;border-top:1px solid rgba(200,150,12,0.15)}
+    footer img{height:58px;margin-bottom:16px;border-radius:12px}
+    footer p{color:rgba(255,255,255,0.35);font-size:14px;line-height:1.9}
 
-    /* ===== ORÇAMENTO ===== */
-    .orcamento-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px; max-width: 500px; margin: 0 auto 36px;
-    }
-    .orc-card {
-      background: var(--dark3);
-      border: 1px solid rgba(200,150,12,0.25);
-      border-radius: 18px; padding: 28px 20px; text-align: center;
-    }
-    .orc-icon { font-size: 38px; margin-bottom: 14px; }
-    .orc-card h3 {
-      font-family:'Montserrat',sans-serif; font-weight:800;
-      font-size:17px; color:var(--gold-light); margin-bottom:10px; line-height:1.3;
-    }
-    .orc-card p { font-size:15px; color:var(--gray); line-height:1.65; }
-    .orc-badge {
-      display: inline-block; margin-top: 14px;
-      background: rgba(200,150,12,0.15);
-      border: 1px solid rgba(200,150,12,0.4);
-      color: var(--gold); padding: 7px 16px; border-radius: 50px;
-      font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
-    }
-    .orc-cta-wrap { text-align: center; }
-
-    /* ===== REVIEWS ===== */
-    .reviews-grid {
-      display: flex; flex-direction: column;
-      gap: 16px; max-width: 500px; margin: 0 auto;
-    }
-    .review-card {
-      background: var(--dark3);
-      border: 1px solid rgba(200,150,12,0.18);
-      border-radius: 18px; padding: 24px 20px;
-    }
-    .review-top { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-    .review-avatar {
-      width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      display: flex; align-items: center; justify-content: center;
-      font-family:'Montserrat',sans-serif; font-weight:900; font-size:22px; color:var(--dark);
-    }
-    .review-name {
-      font-family:'Montserrat',sans-serif; font-weight:700;
-      font-size:17px; color:var(--white);
-    }
-    .review-stars { color:var(--gold-light); font-size:16px; margin-top:3px; }
-    .review-text {
-      font-size:15px; color:rgba(255,255,255,0.78);
-      line-height:1.7; font-style:italic;
-    }
-
-    /* ===== CTA FINAL ===== */
-    .cta-final {
-      background: linear-gradient(135deg, var(--dark), #1a1200);
-      padding: 60px 20px; text-align: center;
-      border-top: 1px solid rgba(200,150,12,0.25);
-    }
-    .cta-final h2 {
-      font-family:'Montserrat',sans-serif; font-weight:900;
-      font-size:clamp(24px,6.5vw,34px); color:var(--white);
-      margin-bottom:14px; line-height:1.2;
-    }
-    .cta-final h2 .g { color: var(--gold-light); }
-    .cta-final p {
-      color:rgba(255,255,255,0.65); font-size:16px;
-      margin-bottom:34px; line-height:1.7;
-      max-width:480px; margin-left:auto; margin-right:auto;
-    }
-    .cta-final .btn-primary {
-      max-width: 380px; margin: 0 auto;
-      font-size: 18px; padding: 20px 28px;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #080808; padding: 36px 20px; text-align: center;
-      border-top: 1px solid rgba(200,150,12,0.15);
-    }
-    footer img { height: 60px; margin-bottom: 16px; border-radius: 12px; }
-    footer p { color:rgba(255,255,255,0.35); font-size:14px; line-height:1.9; }
-
-    /* ===== FLOATING WA ===== */
-    .float-wa {
-      position: fixed; bottom: 24px; right: 20px; z-index: 9999;
-      background: var(--green); color: var(--white);
-      width: 64px; height: 64px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 32px; text-decoration: none;
-      box-shadow: 0 8px 24px rgba(37,211,102,0.5);
-      animation: pulse-wa 2.5s infinite;
-      touch-action: manipulation;
-    }
-    @keyframes pulse-wa {
-      0%,100%{box-shadow:0 8px 24px rgba(37,211,102,0.5)}
-      50%{box-shadow:0 8px 36px rgba(37,211,102,0.8), 0 0 0 14px rgba(37,211,102,0.1)}
-    }
-
-    /* ===== DESKTOP: grade 2 colunas ===== */
-    @media (min-width: 900px) {
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 900px;
-      }
-      .orcamento-grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 680px;
-      }
-    }
+    /* FLOATING */
+    .float-wa{position:fixed;bottom:22px;right:18px;z-index:9999;background:var(--green);color:#fff;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;text-decoration:none;box-shadow:0 8px 24px rgba(37,211,102,0.5);animation:pulse 2.5s infinite}
+    @keyframes pulse{0%,100%{box-shadow:0 8px 24px rgba(37,211,102,0.5)}50%{box-shadow:0 8px 36px rgba(37,211,102,0.8),0 0 0 14px rgba(37,211,102,0.1)}}
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
-  <img class="header-logo"
-    src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/2507f004e_whatsapp_image_3293426194174639.jpg"
-    alt="PA Pedreiro Azulejista"/>
-  <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." class="header-cta">
+  <img class="logo" src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto01_seixos_banheiro.jpg" alt="PA"/>
+  <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." class="header-btn">
     <i class="fab fa-whatsapp"></i> Falar Agora
   </a>
 </header>
 
-<!-- HERO -->
-<section class="hero-cover">
-  <img
-    src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/5bc44986b_whatsapp_image_995037946756112.jpg"
-    alt="Revestimento em seixos banheiro premium"
-    loading="eager"/>
-  <div class="hero-cover-overlay">
-    <div class="hero-badge"><i class="fas fa-star"></i> Nota 5.0 no Google · 11 Avaliações</div>
-    <h1>
-      <span class="highlight">Luiz Carlos</span>
-      <span class="line2">Pedreiro · Azulejista · Reformas</span>
-    </h1>
-    <p class="hero-desc">Especialista em revestimentos, azulejamento e reformas em Recife e Região Metropolitana. Qualidade e acabamento premium em cada obra.</p>
-    <div class="hero-rating">
-      <div class="hero-stars">★★★★★</div>
-      <div class="hero-rating-text">5.0 · Google Meu Negócio</div>
-    </div>
+<section class="hero">
+  <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto01_seixos_banheiro.jpg" alt="Revestimento em seixos" loading="eager"/>
+  <div class="hero-content">
+    <div class="badge"><i class="fas fa-star"></i> Nota 5.0 no Google · 11 Avaliações</div>
+    <h1><span>Luiz Carlos</span><em class="hero-sub">Pedreiro · Azulejista · Reformas</em></h1>
+    <p class="hero-desc">Especialista em revestimentos, azulejamento e reformas em Recife e Região Metropolitana.</p>
+    <div class="hero-stars">★★★★★<span>5.0 · Google Meu Negócio</span></div>
     <div class="hero-btns">
-      <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." class="btn-primary">
-        <i class="fab fa-whatsapp"></i> Solicitar Orçamento Agora
-      </a>
-      <a href="#portfolio" class="btn-outline">
-        <i class="fas fa-images"></i> Ver Trabalhos Realizados
-      </a>
+      <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." class="btn-green"><i class="fab fa-whatsapp"></i> Solicitar Orçamento Agora</a>
+      <a href="#portfolio" class="btn-gold-outline"><i class="fas fa-images"></i> Ver Trabalhos Realizados</a>
     </div>
-  </div>
-  <div class="hero-scroll">
-    <span>Role para ver mais</span>
-    <i class="fas fa-chevron-down"></i>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-track">
-    <div class="trust-item"><div class="trust-num">5.0</div><div class="trust-label">Google</div></div>
-    <div class="trust-item"><div class="trust-num">11+</div><div class="trust-label">Avaliações</div></div>
-    <div class="trust-item"><div class="trust-num">10+</div><div class="trust-label">Anos Exp.</div></div>
-    <div class="trust-item"><div class="trust-num">100%</div><div class="trust-label">Garantia</div></div>
-  </div>
+<div class="trust">
+  <div class="trust-item"><div class="trust-num">5.0</div><div class="trust-label">Google</div></div>
+  <div class="trust-item"><div class="trust-num">11+</div><div class="trust-label">Avaliações</div></div>
+  <div class="trust-item"><div class="trust-num">10+</div><div class="trust-label">Anos Exp.</div></div>
+  <div class="trust-item"><div class="trust-num">100%</div><div class="trust-label">Garantia</div></div>
 </div>
 
-<!-- SERVIÇOS -->
-<section class="section bg-dark">
-  <div class="section-header">
-    <div class="section-tag">Serviços</div>
+<section class="sec sec-dark">
+  <div class="sec-hdr">
+    <div class="sec-tag">Serviços</div>
     <h2>O que <span class="g">fazemos</span></h2>
     <p>Do planejamento à entrega, com qualidade e prazo garantido.</p>
   </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🧱</div>
-      <h3>Assentamento de Azulejo</h3>
-      <p>Banheiros, cozinhas, fachadas e externos.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🪨</div>
-      <h3>Revestimento em Seixos</h3>
-      <p>Acabamento telado premium com pedras naturais.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🏠</div>
-      <h3>Reforma Completa</h3>
-      <p>Paredes, reboco, pintura, estrutura e acabamentos.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔨</div>
-      <h3>Cobertura e Telhado</h3>
-      <p>Construção, reforma e substituição de coberturas.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🏗️</div>
-      <h3>Alvenaria e Reboco</h3>
-      <p>Muros, paredes e acabamentos externos.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">✨</div>
-      <h3>Porcelanato e Piso</h3>
-      <p>Porcelanato, cerâmica e piso vinílico.</p>
-    </div>
+  <div class="svc-grid">
+    <div class="svc-card"><div class="svc-icon">🧱</div><h3>Assentamento de Azulejo</h3><p>Banheiros, cozinhas, fachadas e externos.</p></div>
+    <div class="svc-card"><div class="svc-icon">🪨</div><h3>Revestimento em Seixos</h3><p>Acabamento telado premium com pedras naturais.</p></div>
+    <div class="svc-card"><div class="svc-icon">🏠</div><h3>Reforma Completa</h3><p>Paredes, reboco, pintura e acabamentos.</p></div>
+    <div class="svc-card"><div class="svc-icon">🔨</div><h3>Cobertura e Telhado</h3><p>Construção, reforma e substituição.</p></div>
+    <div class="svc-card"><div class="svc-icon">🏗️</div><h3>Alvenaria e Reboco</h3><p>Muros, paredes e acabamentos externos.</p></div>
+    <div class="svc-card"><div class="svc-icon">✨</div><h3>Porcelanato e Piso</h3><p>Porcelanato, cerâmica e piso vinílico.</p></div>
   </div>
 </section>
 
-<!-- PORTFÓLIO -->
-<section class="section bg-light" id="portfolio">
-  <div class="section-header">
-    <div class="section-tag">Portfólio</div>
+<section class="sec sec-light" id="portfolio">
+  <div class="sec-hdr">
+    <div class="sec-tag">Portfólio</div>
     <h2>Serviços <span class="g">Realizados</span></h2>
     <p>Confira nossos trabalhos mais recentes.</p>
   </div>
-  <div class="gallery-grid">
+  <div class="gallery">
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/5bc44986b_whatsapp_image_995037946756112.jpg" alt="Revestimento seixos banheiro" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Revestimento em seixos — banheiro com acabamento telado premium.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+revestimento+em+seixos!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto01_seixos_banheiro.jpg" alt="Seixos banheiro"/>
+      <div class="g-body"><p>Revestimento em seixos — banheiro com acabamento telado premium.</p><a href="https://wa.me/5581999999999?text=Quero+seixos!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/df9fc5b1d_whatsapp_image_3175898566134096.jpg" alt="Seixos batente da porta" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Seixos no batente da porta — acabamento detalhado e preciso.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+revestimento+em+seixos!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto02_seixos_batente.jpg" alt="Seixos batente"/>
+      <div class="g-body"><p>Seixos no batente da porta — acabamento detalhado e preciso.</p><a href="https://wa.me/5581999999999?text=Quero+seixos!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/7c95c9d05_whatsapp_image_850004624845357.jpg" alt="Seixos ao lado da porta" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Seixos ao lado da porta — pedras naturais com acabamento fino.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+revestimento+em+seixos!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto03_seixos_porta.jpg" alt="Seixos porta"/>
+      <div class="g-body"><p>Seixos ao lado da porta — pedras naturais com acabamento fino.</p><a href="https://wa.me/5581999999999?text=Quero+seixos!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/a14398bf3_whatsapp_image_844384774993025.jpg" alt="Porcelanato madeirado fachada" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Porcelanato madeirado em fachada — moderno e valorizado.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+porcelanato+na+fachada!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto04_porcelanato_fachada.jpg" alt="Porcelanato fachada"/>
+      <div class="g-body"><p>Porcelanato madeirado em fachada — moderno e valorizado.</p><a href="https://wa.me/5581999999999?text=Quero+porcelanato!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/63a5e16b8_whatsapp_image_1000176695955661.jpg" alt="Reboco muro externo" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Reboco e chapisco em muro externo — alvenaria sólida e bem executada.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+servi%C3%A7o+de+reboco!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto05_reboco_muro.jpg" alt="Reboco muro"/>
+      <div class="g-body"><p>Reboco e chapisco em muro externo — alvenaria sólida e bem executada.</p><a href="https://wa.me/5581999999999?text=Quero+reboco!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/ad00ae8db_whatsapp_image_1614634747328807.jpg" alt="Instalação cobertura telha" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Instalação de cobertura com telha — equipe especializada e serviço seguro.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto06_cobertura_telha.jpg" alt="Cobertura telha"/>
+      <div class="g-body"><p>Instalação de cobertura com telha — equipe especializada e segura.</p><a href="https://wa.me/5581999999999?text=Quero+cobertura!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/377ec64e4_whatsapp_image_1171696861813192.jpg" alt="Estrutura telhado madeira" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Estrutura de telhado com ripas — base sólida para longa durabilidade.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto07_estrutura_ripas.jpg" alt="Estrutura ripas"/>
+      <div class="g-body"><p>Estrutura de telhado com ripas — base sólida para longa durabilidade.</p><a href="https://wa.me/5581999999999?text=Quero+telhado!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/db2015e89_whatsapp_image_873174448508483.jpg" alt="Telha fibrocimento instalada" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Telha fibrocimento instalada — acabamento limpo e sem infiltrações.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto08_telha_fibrocimento.jpg" alt="Telha fibrocimento"/>
+      <div class="g-body"><p>Telha fibrocimento instalada — acabamento limpo e sem infiltrações.</p><a href="https://wa.me/5581999999999?text=Quero+telhado!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/8d003603c_whatsapp_image_2415393772269902.jpg" alt="Reforma completa nova estrutura" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Reforma completa com nova estrutura — do planejamento à entrega.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+reforma+completa!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto09_reforma_estrutura.jpg" alt="Reforma estrutura"/>
+      <div class="g-body"><p>Reforma completa com nova estrutura — do planejamento à entrega.</p><a href="https://wa.me/5581999999999?text=Quero+reforma!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/cc605ef8c_whatsapp_image_2362279414269736.jpg" alt="Cobertura fibrocimento finalizada" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Cobertura finalizada com telha fibrocimento — durabilidade e proteção.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto10_cobertura_finalizada.jpg" alt="Cobertura finalizada"/>
+      <div class="g-body"><p>Cobertura finalizada com telha fibrocimento — durabilidade e proteção.</p><a href="https://wa.me/5581999999999?text=Quero+cobertura!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
-    <div class="gallery-card gallery-card-last">
-      <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/4e6c40770_whatsapp_image_1345315717535209.jpg" alt="Estrutura madeira nova cobertura" loading="lazy"/>
-      <div class="gallery-card-body">
-        <p>Estrutura de madeira para nova cobertura — reforma com qualidade total.</p>
-        <a href="https://wa.me/5581999999999?text=Quero+cobertura+e+telhado!" class="gallery-cta"><i class="fab fa-whatsapp"></i> Quero Igual</a>
-      </div>
+    <div class="g-card">
+      <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto11_estrutura_madeira.jpg" alt="Estrutura madeira"/>
+      <div class="g-body"><p>Estrutura de madeira para nova cobertura — reforma com qualidade total.</p><a href="https://wa.me/5581999999999?text=Quero+cobertura!" class="g-btn"><i class="fab fa-whatsapp"></i> Quero Igual</a></div>
     </div>
 
   </div>
 </section>
 
-<!-- ORÇAMENTO -->
-<section class="section bg-dark" id="orcamento">
-  <div class="section-header">
-    <div class="section-tag">Orçamento</div>
+<section class="sec sec-dark" id="orcamento">
+  <div class="sec-hdr">
+    <div class="sec-tag">Orçamento</div>
     <h2>Como funciona <span class="g">nosso orçamento</span></h2>
-    <p>Escolha a modalidade que melhor se encaixa na sua necessidade.</p>
+    <p>Escolha a modalidade ideal para você.</p>
   </div>
-  <div class="orcamento-grid">
-    <div class="orc-card">
-      <div class="orc-icon">💬</div>
-      <h3>Estimativas Online Gratuitas</h3>
-      <p>Descreva seu projeto pelo WhatsApp e receba uma estimativa sem sair de casa. Rápido e sem compromisso.</p>
-      <span class="orc-badge">100% Grátis</span>
-    </div>
-    <div class="orc-card">
-      <div class="orc-icon">📐</div>
-      <h3>Orçamento Personalizado no Local</h3>
-      <p>Visita técnica presencial para medição e avaliação detalhada. Sujeito a taxa mínima de visita.</p>
-      <span class="orc-badge">Taxa Mínima</span>
-    </div>
+  <div class="orc-grid">
+    <div class="orc-card"><div class="orc-icon">💬</div><h3>Estimativas Online Gratuitas</h3><p>Descreva seu projeto pelo WhatsApp e receba estimativa sem sair de casa.</p><span class="orc-badge">100% Grátis</span></div>
+    <div class="orc-card"><div class="orc-icon">📐</div><h3>Orçamento Personalizado no Local</h3><p>Visita técnica presencial para medição detalhada. Sujeito a taxa mínima de visita.</p><span class="orc-badge">Taxa Mínima</span></div>
   </div>
-  <br/><br/>
-  <div class="orc-cta-wrap">
-    <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn-primary" style="max-width:380px;margin:0 auto;">
-      <i class="fab fa-whatsapp"></i> Solicitar Orçamento Agora
-    </a>
+  <div style="text-align:center;margin-top:8px">
+    <a href="https://wa.me/5581999999999?text=Quero+um+or%C3%A7amento!" class="btn-green" style="max-width:360px;margin:0 auto"><i class="fab fa-whatsapp"></i> Solicitar Orçamento Agora</a>
   </div>
 </section>
 
-<!-- AVALIAÇÕES -->
-<section class="section bg-dark">
-  <div class="section-header">
-    <div class="section-tag">Avaliações</div>
+<section class="sec sec-dark">
+  <div class="sec-hdr">
+    <div class="sec-tag">Avaliações</div>
     <h2>O que nossos clientes <span class="g">dizem</span></h2>
     <p>Nota 5.0 com 11 avaliações verificadas no Google.</p>
   </div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-top">
-        <div class="review-avatar">W</div>
-        <div><div class="review-name">Wlisses</div><div class="review-stars">★★★★★</div></div>
-      </div>
-      <p class="review-text">"Serviço impecável! O Luiz Carlos fez o revestimento do meu banheiro em seixos e ficou perfeito. Pontual, caprichoso e preço justo. Recomendo 100%!"</p>
-    </div>
-    <div class="review-card">
-      <div class="review-top">
-        <div class="review-avatar">T</div>
-        <div><div class="review-name">Tobias</div><div class="review-stars">★★★★★</div></div>
-      </div>
-      <p class="review-text">"Contratei para reforma completa da fachada. Trabalho de qualidade, equipe organizada e entregou no prazo combinado. Muito profissional!"</p>
-    </div>
-    <div class="review-card">
-      <div class="review-top">
-        <div class="review-avatar">A</div>
-        <div><div class="review-name">Alberes</div><div class="review-stars">★★★★★</div></div>
-      </div>
-      <p class="review-text">"Fiz a troca do telhado com o Luiz Carlos. Serviço rápido, seguro e o acabamento ficou excelente. Com certeza vou chamar novamente!"</p>
-    </div>
+  <div class="rev-grid">
+    <div class="rev-card"><div class="rev-top"><div class="rev-av">W</div><div><div class="rev-name">Wlisses</div><div class="rev-stars">★★★★★</div></div></div><p class="rev-text">"Serviço impecável! O Luiz Carlos fez o revestimento do meu banheiro em seixos e ficou perfeito. Pontual, caprichoso e preço justo. Recomendo 100%!"</p></div>
+    <div class="rev-card"><div class="rev-top"><div class="rev-av">T</div><div><div class="rev-name">Tobias</div><div class="rev-stars">★★★★★</div></div></div><p class="rev-text">"Contratei para reforma completa da fachada. Trabalho de qualidade, equipe organizada e entregou no prazo combinado. Muito profissional!"</p></div>
+    <div class="rev-card"><div class="rev-top"><div class="rev-av">A</div><div><div class="rev-name">Alberes</div><div class="rev-stars">★★★★★</div></div></div><p class="rev-text">"Fiz a troca do telhado com o Luiz Carlos. Serviço rápido, seguro e o acabamento ficou excelente. Com certeza vou chamar novamente!"</p></div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<div class="cta-final">
+<div class="cta-sec">
   <h2>Pronto para transformar <span class="g">sua obra?</span></h2>
-  <p>Entre em contato agora e receba uma estimativa gratuita pelo WhatsApp. Atendemos Recife e toda a Região Metropolitana.</p>
-  <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." class="btn-primary">
+  <p>Entre em contato agora e receba uma estimativa gratuita. Atendemos Recife e toda a Região Metropolitana.</p>
+  <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." class="btn-green">
     <i class="fab fa-whatsapp"></i> Falar com Luiz Carlos Agora
   </a>
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <img src="https://media.base44.com/images/public/whatsapp/6a1de5bcb0ac9c73700581ce/your_agent/6a1de5bcb0ac9c73700581cf/2507f004e_whatsapp_image_3293426194174639.jpg" alt="Logo PA"/>
+  <img src="https://raw.githubusercontent.com/luke2099-bit/luke2099-bit.github.io/main/fotos/foto01_seixos_banheiro.jpg" alt="PA"/>
   <p>Luiz Carlos · Pedreiro Azulejista e Reformas<br/>Recife - Pernambuco · Atendimento via WhatsApp<br/>© 2026 · Todos os direitos reservados</p>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." class="float-wa" aria-label="WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." class="float-wa"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
